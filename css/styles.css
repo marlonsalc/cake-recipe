@@ -104,7 +104,37 @@ main {
     grid-template-columns: auto 1fr;
 }
 
-/* .strong {} */
+.instruction {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    padding: 10px 0;
+
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background: #F2994A;
+    font-family: 'Playfair Display', sans-serif;
+    padding-bottom: 5px;
+    margin-right: 10px;
+    display: flex;
+    font-size: 12px;
+    justify-self: center;
+    align-self: self-start;
+    color: white;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-number p {
+    font-size: 24px;
+}
+
+
 
 
 .ingredient input[type="checkbox"] {
@@ -115,6 +145,7 @@ main {
     border-radius: 5px;
     border: 1px solid black;
 }
+
 
 .time-stamps {
     background-color: #FFFFFF;
@@ -169,10 +200,33 @@ footer {
 
 footer a {
     background: linear-gradient(45deg, #405DE6, #E4405F);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1024px) {
     .container {
@@ -183,7 +237,7 @@ footer a {
 
 @media screen and (max-width: 768px) {
     .container {
-        width: 90%;
+        width: 95%;
     }
 
     header h1 {
