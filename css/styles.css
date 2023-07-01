@@ -1,0 +1,295 @@
+@font-face {
+    font-family: 'Typold';
+    src: url('/src/fonts/Typold\ Extended\ Regular.ttf') format('truetype');
+    font-weight: 400;
+
+}
+
+@font-face {
+    font-family: 'Typold';
+    src: url('/src/fonts/Typold\ Extended\ Bold.ttf') format('truetype');
+    font-weight: 700;
+
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+
+    
+}
+
+.container {
+    margin: auto;
+    width: 60%;
+    max-width: 950px;
+    padding: 40px 0;
+}
+
+header h1 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 54px;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+header p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #3F3232;
+    display: flex;
+    width: 70%;
+    padding-bottom: 30px;
+}
+
+header .icon {
+    padding-right: 10px;
+    color: #C9C2C2;
+}
+
+
+i.clock, span.fork {
+    font-size: 32px;
+}
+
+span.fork {
+    color: #F19C4D;
+}
+
+header img {
+    object-fit: cover;
+    width: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: 
+    "column-a column-b";
+}
+
+.ingredients {
+    padding: 40px 0;
+    grid-area: column-a;
+}
+
+.subtitle {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 32px;
+}
+
+.cook-name {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 20px;
+    color: #000;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ingredient {
+    display: grid;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 0;
+    grid-template-columns: auto 1fr;
+}
+
+/* .strong {} */
+
+
+.ingredient input[type="checkbox"] {
+    margin-right: 10px;
+    display: inline;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.time-stamps {
+    background-color: #FFFFFF;
+    padding: 45px;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    margin: 40px 0;
+    justify-self: end;
+    grid-area: column-b;
+
+}
+
+.time {
+    display: flex;
+    padding: 30px 0;
+}
+
+.time-stamp {
+    padding: 0 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+}
+
+.bold {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.gray {
+    color: #BFBABA
+}
+
+.typold {
+    font-family: 'Typold', sans-serif;
+    font-size: 12px;
+}
+.orange {
+    color: #F19C4D;
+    font-weight: 700;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        width: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time-stamps {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .ingredients {
+        padding: 0;
+    }
+
+    .ingredient {
+        padding: 10px 0;
+    }
+
+    .ingredient input[type="checkbox"] {
+        margin-right: 10px;
+        display: inline;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+    .time-stamps {
+        padding: 10px;
+        margin: 20px 0;
+    }
+
+    .time {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 0;
+    }
+
+    .time-stamp {
+        align-self: center;
+    }
+
+    .cook-name {
+        padding: 20px 0;
+    }
+
+    .typold {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .cook-name {
+        font-size: 16px;
+    }
+
+    .ingredient {
+        font-size: 14px;
+    }
+
+    .time-stamp {
+        font-size: 8px;
+    }
+
+    .typold {
+        font-size: 8px;
+    }
+
+    .time-stamps {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+        
+    }
+
+    .time {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 0;
+    }
+
+    .time-stamp {
+        align-self: center;
+    }
+
+    .cook-name {
+        padding: 20px 0;
+    }
+
+    .typold {
+        font-size: 10px;
+    }
+
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Classic Cheesecake Recipe</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="icon" href="/src/img/favicon/cake-icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                Classic Cheesecake Recipe
+            </h1>
+            <p>
+                <i class="fa-solid icon fa-grip"></i><i>Look no further for a creamy and ultra smooth classic cheesecake recipe! Paired with a buttery graham cracker crust, no one can deny its simple decadence. For the best results, bake in a water bath.</i>
+            </p>
+            <img src="img/pastel.png" alt="">
+        </header>
+        <main>
+            <aside class="time-stamps">
+                <div class="time">
+                    <div class="icon-stamp">
+                        <span class="fork material-symbols-outlined">
+                            local_dining
+                            </span>
+                    </div>
+                    <div class="time-stamp">
+                        <p class="bold gray">Yield</p>
+                        <p class="typold orange">Servings 12</p>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="icon-stamp">
+                        <i class="clock fa-regular fa-clock"></i>
+                    </div>
+                    <div class="time-stamp">
+                        <p class="bold gray">Prep Time</p>
+                        <p class="typold">45 minutes</p>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="icon-stamp">
+                        <i class=" clock fa-regular fa-clock"></i>
+                    </div>
+                    <div class="time-stamp">
+                        <p class="bold gray">Cook Time</p>
+                        <p class="typold">1 hour</p>
+                    </div>
+                </div>
+                <div class="time">
+                    <div class="icon-stamp">
+                        <i class="clock fa-regular fa-clock"></i>
+                    </div>
+                    <div class="time-stamp">
+                        <p class="bold gray">Additional Time</p>
+                        <p class="typold">7 hours</p>
+                    </div>
+            </aside>
+            <section class="ingredients">
+                <h2 class="subtitle">Ingredients</h2>
+                <h3 class="cook-name">Graham Cracker Crust</h3>
+                <div class="ingredient">
+                    <input class="graham-crust" type="checkbox">
+                    <p>1 and 1/2 cups (150g) <strong>graham cracker crumbs</strong> (about 10 full sheet graham crackers)</p>
+                </div>
+                <div class="ingredient">
+                    <input class="graham-crust" type="checkbox">
+                    <p>5 Tablespoons (70g) <strong>unsalted butter</strong>, melted</p>
+                </div>
+                <div class="ingredient">
+                    <input class="graham-crust" type="checkbox">
+                    <p>1/4 cup (50g) <strong>granulated sugar</strong></p>
+                </div>
+                <h3 class="cook-name">Cheesecake</h3>
+                <div class="ingredient">
+                    <input class="cheesecake"   type="checkbox">
+                    <p>four 8-ounce blocks (904g) full-fat <strong>cream cheese</strong>, softened to room temperature</p>
+                </div>
+                <div class="ingredient">
+                    <input class="cheesecake"  type="checkbox">
+                    <p>1 cup (200g) <strong>granulated sugar</strong></p>
+                </div>
+                <div class="ingredient">
+                    <input class="cheesecake"  type="checkbox">
+                    <p>1 cup (240g) full-fat <strong>sour cream</strong>, at room temperature</p>
+                </div>
+                <div class="ingredient">
+                    <input class="cheesecake"  type="checkbox">
+                    <p>1 teaspoon <strong>pure vanilla extract</strong></p>
+                </div>
+                <div class="ingredient">
+                    <input class="cheesecake"  type="checkbox">
+                    <p>2 teaspoons <strong>fresh lemon juice</strong> (optional, but recommended)</p>
+                </div>
+                <div class="ingredient">
+                    <input  class="cheesecake" type="checkbox">
+                    <p>3 large <strong>eggs</strong>, at room temperature</p>
+                </div>
+                <div class="ingredient">
+                    <input class="cheesecake"  type="checkbox">
+                    <p>Topping suggestions: <strong>salted caramel</strong>, <strong>lemon curd</strong>, <strong>strawberry topping</strong>, <strong>chocolate ganache</strong>, <strong>red wine chocolate ganache</strong>, <strong>fresh fruit</strong>, <strong>whipped cream</strong>, or <strong>raspberry sauce</strong> (recipe in notes)</p>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/6c74031093.js" crossorigin="anonymous"></script>
+    <script>
+        const grahamCrust = document.querySelectorAll('.graham-crust');
+        const cheesecake = document.querySelectorAll('.cheesecake');
+
+        grahamCrust.forEach(checkbox => {
+            checkbox.addEventListener('change', checkAllChecked);
+        });
+
+        cheesecake.forEach(checkbox => {
+            checkbox.addEventListener('change', checkAllChecked);
+        });
+
+        function checkAllChecked() {
+            
+            const grahamCrustChecked = Array.from(grahamCrust).every(checkbox => checkbox.checked);
+
+            const cheesecakeChecked = Array.from(cheesecake).every(checkbox => checkbox.checked);
+
+            if (grahamCrustChecked && cheesecakeChecked) {
+                setTimeout(() => {
+                    alert('You are ready to start cooking!');
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>
